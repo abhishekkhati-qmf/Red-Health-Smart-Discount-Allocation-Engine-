@@ -53,13 +53,13 @@ The `calculateAllocation()` function is the core of the Smart Discount Allocatio
 
 ### ⚙️ Step-by-Step Logic
 
-# 4.1. **Normalization**
+ 4.1. *Normalization*
 
 Since the input metrics have different scales (e.g., 0–100 for performance, raw numbers for clients), we normalize each metric to a common 0–1 range:
 
 normalizedValue = (value - min) / (max - min)
 
-# 4.2. **Weighted Composite Score Calculation**
+4.2. *Weighted Composite Score Calculation*
 
 Each normalized metric is multiplied by its assigned weight, and all are summed to get a composite score for each agent:
 
@@ -77,17 +77,17 @@ compositeScore =
   normalizedSeniority    * 0.20 +
   normalizedClients      * 0.15
 
-# 4.3. **Proportional Budget Distribution**
+ 4.3. *Proportional Budget Distribution*
 
 Once all composite scores are computed, the total kitty is distributed proportionally:
 
 agentAllocation = (agentCompositeScore / totalCompositeScore) * totalKitty
 
-# 4.4. **Justification Generation**
+4.4. *Justification Generation*
 
 Each agent also receives a human-readable explanation string based on their performance:
 
-**Examples:**
+*Examples:*
 - "High performance score and strong target achievement."
 - "Average performance but high client load."
 
