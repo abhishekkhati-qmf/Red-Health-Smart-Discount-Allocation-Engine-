@@ -71,7 +71,7 @@ Each normalized metric is multiplied by its assigned weight, and all are summed 
 | Seniority          | 20%    |
 | Active Clients     | 15%    |
 
-```ts
+
 compositeScore = 
   normalizedPerformance * 0.35 +
   normalizedTarget       * 0.30 +
@@ -82,7 +82,6 @@ compositeScore =
 
 Once all composite scores are computed, the total kitty is distributed proportionally:
 
-```ts
 agentAllocation = (agentCompositeScore / totalCompositeScore) * totalKitty
 
 ### 4. **Justification Generation**
