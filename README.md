@@ -89,6 +89,6 @@ In the project directory, you can run the following commands:
 -   
 
   
-👤 Author
-Abhishek Khati
-GitHub | LinkedIn
+## 👤 Author
+**Abhishek Khati**  
+[GitHub](https://github.com/abhishekkhati-qmf) • [LinkedIn](https://www.linkedin.com/in/abhishekkhati)
