@@ -36,6 +36,66 @@ The core of the engine is a multi-step calculation process designed for fairness
 
 3.  **Proportional Distribution:** The total discount budget is then distributed among the agents in proportion to their individual composite scores. Agents with higher composite scores receive a larger share of the budget.
 
+4.  ## 🧮 How `calculateAllocation()` Works
+
+The `calculateAllocation()` function is the core of the Smart Discount Allocation Engine. It takes in the total available discount budget (kitty) and a list of sales agents with their respective performance metrics. It returns a fair, transparent, and explainable allocation for each agent using a weighted multi-metric algorithm.
+
+### 🔢 Input Parameters
+
+- `totalKitty`: `number` — The total discount budget to be distributed.
+- `agents`: `Array<SalesAgent>` — A list of sales agents, each with the following fields:
+  - `performanceScore` (0–100)
+  - `targetAchievement` (percentage)
+  - `seniorityMonths` (number)
+  - `activeClients` (number)
+
+---
+
+### ⚙️ Step-by-Step Logic
+
+#### 1. **Normalization**
+
+Since the input metrics have different scales (e.g., 0–100 for performance, raw numbers for clients), we normalize each metric to a common 0–1 range:
+
+```ts
+normalizedValue = (value - min) / (max - min)
+
+### 2. **Weighted Composite Score Calculation**
+
+Each normalized metric is multiplied by its assigned weight, and all are summed to get a composite score for each agent:
+
+| Metric             | Weight |
+|--------------------|--------|
+| Performance Score  | 35%    |
+| Target Achievement | 30%    |
+| Seniority          | 20%    |
+| Active Clients     | 15%    |
+
+```ts
+compositeScore = 
+  normalizedPerformance * 0.35 +
+  normalizedTarget       * 0.30 +
+  normalizedSeniority    * 0.20 +
+  normalizedClients      * 0.15
+
+### 3. **Proportional Budget Distribution**
+
+Once all composite scores are computed, the total kitty is distributed proportionally:
+
+```ts
+agentAllocation = (agentCompositeScore / totalCompositeScore) * totalKitty
+
+### 4. **Justification Generation**
+
+Each agent also receives a human-readable explanation string based on their performance:
+
+**Examples:**
+- "High performance score and strong target achievement."
+- "Average performance but high client load."
+
+This justification is generated conditionally based on normalized values and helps build trust and transparency in the allocation process.
+
+
 ## Technology Stack
 
 -   **Frontend:** React.js
