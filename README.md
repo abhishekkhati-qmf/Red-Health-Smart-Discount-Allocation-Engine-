@@ -5,7 +5,7 @@ The application provides a clean, interactive interface for inputting a total bu
 
 ## 🔗 Live Demo
 
-🌐 [Click here to view the live application](smartdiscountallocation-abhishekkhati.netlify.app)
+🌐 [Click here to view the live application](https://smartdiscountallocation-abhishekkhati.netlify.app/)
 
 ## Features
 
