@@ -3,6 +3,10 @@ This repository contains the source code for the Smart Discount Allocation Engin
 
 The application provides a clean, interactive interface for inputting a total budget, managing a list of sales agents with their performance data, and instantly calculating the optimal distribution of funds.
 
+## 🔗 Live Demo
+
+🌐 [Click here to view the live application](https://your-deployed-site.com)
+
 ## Features
 
 -   **Dynamic Budget Configuration:** Set the total available discount budget that needs to be distributed.
@@ -82,3 +86,9 @@ In the project directory, you can run the following commands:
 -   `npm run build`: Builds the app for production to the `dist` folder.
 -   `npm run preview`: Serves the production build locally to preview the final app.
 -   `npm run lint`: Lints the source files using ESLint.
+-   
+
+  
+👤 Author
+Abhishek Khati
+GitHub | LinkedIn
