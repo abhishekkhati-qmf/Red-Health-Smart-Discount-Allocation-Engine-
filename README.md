@@ -1,6 +1,4 @@
 # Red Health Smart Discount Allocation Engine
-[![Ask DeepWiki](https://devin.ai/assets/askdeepwiki.png)](https://deepwiki.com/abhishekkhati-qmf/Red-Health-Smart-Discount-Allocation-Engine-)
-
 This repository contains the source code for the Smart Discount Allocation Engine, a web application designed to help managers intelligently and fairly distribute a discount budget among sales agents. The tool uses a weighted algorithm based on multiple performance indicators to ensure that the allocation is data-driven, transparent, and aligned with business goals.
 
 The application provides a clean, interactive interface for inputting a total budget, managing a list of sales agents with their performance data, and instantly calculating the optimal distribution of funds.
